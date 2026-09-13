@@ -1,2 +1,2 @@
 # Pearly
-Memory Matching Game based in Javascript.
+Memory based Card Matching Game based in Javascript.
