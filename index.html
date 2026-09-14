@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pearly</title>
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/Pearly_3.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+
+    <!-- Home screen -->
+
+    <section
+        id="home-screen"
+        class="screen"
+    >
+
+        <div class="home-panel">
+
+            <img
+                id="pearly-home"
+                src="assets/Pearly_3.png"
+                alt="Pearly"
+            >
+
+            <h1>Pearly</h1>
+
+            <h5>
+                Memory Matching Game
+            </h5>
+
+            <p id="story-text">
+                Help Pearly match all the pairs!
+            </p>
+
+
+            <div class="home-options">
+
+                <label>
+
+                    <span>
+                        Difficulty
+                    </span>
+
+                    <select
+                        id="difficulty-select"
+                    >
+
+                        <option value="easy">
+                            Easy
+                        </option>
+
+                        <option value="medium">
+                            Medium
+                        </option>
+
+                        <option value="hard">
+                            Hard
+                        </option>
+
+                        <option value="expert">
+                            Expert
+                        </option>
+
+                    </select>
+
+                </label>
+
+
+                <label>
+
+                    <span>
+                        Timer
+                    </span>
+
+                    <select
+                        id="timer-mode-select"
+                    >
+
+                        <option value="relaxed">
+                            Relaxed
+                        </option>
+
+                        <option
+                            value="stopwatch"
+                            selected
+                        >
+                            Stopwatch
+                        </option>
+
+                        <option value="countdown">
+                            Countdown
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
+
+
+            <div class="home-buttons">
+
+                <button id="start-btn">
+                    Start Game
+                </button>
+
+                <button id="scores-btn">
+                    Best Scores
+                </button>
+
+            </div>
+
+
+            <div class="home-toggles">
+
+                <label class="toggle-setting">
+
+                    <span>
+                        Sound
+                    </span>
+
+                    <input
+                        id="sound-toggle"
+                        class="toggle-switch"
+                        type="checkbox"
+                        checked
+                    >
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Game screen -->
+
+    <section
+        id="game-screen"
+        class="screen hidden"
+    >
+
+        <div class="game-container">
+
+            <div class="game-top">
+
+
+                <!-- ==========================================
+                     OPTIONAL GAME LEVEL TITLE
+
+                     Comment out this block if you want
+                     to hide the level title.
+                     ========================================== -->
+
+                <div
+                    id="level-title"
+                    class="level-title"
+                >
+                    Easy Level
+                </div>
+
+                <!-- ==========================================
+                     END OPTIONAL GAME LEVEL TITLE
+                     ========================================== -->
+
+
+                <button id="menu-btn">
+                    Menu
+                </button>
+
+
+                <div class="game-info">
+
+                    <div
+                        class="stat-pill moves-pill"
+                    >
+                        Moves:
+                        <span id="moves">
+                            0
+                        </span>
+                    </div>
+
+
+                    <div
+                        id="timer-display"
+                        class="stat-pill time-pill"
+                    >
+                        Time:
+
+                        <span id="timer">
+                            0s
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="game-board"></div>
+
+
+            <div class="game-controls">
+
+                <button id="resume-btn">
+                    Play / Resume
+                </button>
+
+                <button id="pause-btn">
+                    Pause
+                </button>
+
+                <button id="restart-btn">
+                    Restart
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- End screen -->
+
+    <section
+        id="end-screen"
+        class="screen hidden"
+    >
+
+        <div class="end-panel">
+
+            <img
+                id="pearly-end"
+                src="assets/Pearly_3.png"
+                alt="Pearly"
+            >
+
+            <h1>
+                Bye!
+            </h1>
+
+            <p>
+                See you soon!
+            </p>
+
+            <button id="end-home-btn">
+                Back to Home
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Game Menu -->
+
+    <dialog id="settings-dialog">
+
+        <h2>
+            Game Menu
+        </h2>
+
+
+        <label class="setting-row">
+
+            <span>
+                Sound Effects
+            </span>
+
+            <input
+                id="dialog-sound-toggle"
+                class="toggle-switch"
+                type="checkbox"
+            >
+
+        </label>
+
+
+        <div class="dialog-buttons">
+
+            <button id="home-btn">
+                Home
+            </button>
+
+            <button id="exit-btn">
+                Exit Game
+            </button>
+
+            <button id="close-settings-btn">
+                Close
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+
+    <!-- Best Scores -->
+
+    <dialog id="scores-dialog">
+
+        <h2>
+            Best Scores
+        </h2>
+
+
+        <div class="score-row">
+
+            <strong>
+                Easy
+            </strong>
+
+            <span>
+                40 sec
+            </span>
+
+            <span>
+                Moves:
+                <b id="easy-best-moves">
+                    --
+                </b>
+            </span>
+
+            <span>
+                Time:
+                <b id="easy-best-time">
+                    --
+                </b>
+            </span>
+
+        </div>
+
+
+        <div class="score-row">
+
+            <strong>
+                Medium
+            </strong>
+
+            <span>
+                70 sec
+            </span>
+
+            <span>
+                Moves:
+                <b id="medium-best-moves">
+                    --
+                </b>
+            </span>
+
+            <span>
+                Time:
+                <b id="medium-best-time">
+                    --
+                </b>
+            </span>
+
+        </div>
+
+
+        <div class="score-row">
+
+            <strong>
+                Hard
+            </strong>
+
+            <span>
+                110 sec
+            </span>
+
+            <span>
+                Moves:
+                <b id="hard-best-moves">
+                    --
+                </b>
+            </span>
+
+            <span>
+                Time:
+                <b id="hard-best-time">
+                    --
+                </b>
+            </span>
+
+        </div>
+
+
+        <div class="score-row">
+
+            <strong>
+                Expert
+            </strong>
+
+            <span>
+                160 sec
+            </span>
+
+            <span>
+                Moves:
+                <b id="expert-best-moves">
+                    --
+                </b>
+            </span>
+
+            <span>
+                Time:
+                <b id="expert-best-time">
+                    --
+                </b>
+            </span>
+
+        </div>
+
+
+        <button id="close-scores-btn">
+            Close
+        </button>
+
+    </dialog>
+
+
+
+    <!-- Game Result -->
+
+    <dialog id="result-dialog">
+
+        <h2 id="result-title"></h2>
+
+        <p id="result-message"></p>
+
+
+        <div class="result-stats">
+
+            <span id="best-moves-box">
+
+                Best moves:
+
+                <b id="best-moves">
+                    --
+                </b>
+
+            </span>
+
+
+            <span id="best-time-box">
+
+                Best time:
+
+                <b id="best-time">
+                    --
+                </b>
+
+            </span>
+
+        </div>
+
+
+        <div class="dialog-buttons">
+
+            <button id="play-again-btn">
+                Play Again
+            </button>
+
+            <button id="result-home-btn">
+                Home
+            </button>
+
+        </div>
+
+    </dialog>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
