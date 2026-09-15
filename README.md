@@ -183,7 +183,6 @@ This project was created as a hands-on way to practice and strengthen:
 - Arrays and randomization
 - Browser `localStorage`
 - Dynamic HTML generation
-- CSS animations and transforms
 - UI state synchronization
 - Audio handling
 - Relative asset paths
