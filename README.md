@@ -88,7 +88,7 @@ Each round randomly selects flowers from the pool for that difficulty, so repeat
     </td>
     <td align="center" width="50%">
       <strong>Game Lost</strong><br><br>
-      <img src="screenshots/MediumGameLostPopUp.png" alt="Pearly Game Lost Popup" width="100%">
+      <img src="screenshots/MediumStopwatchGameLostPopUp.png" alt="Pearly Game Lost Popup" width="100%">
     </td>
   </tr>
 </table>
