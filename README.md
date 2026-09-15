@@ -45,6 +45,76 @@ Each round randomly selects flowers from the pool for that difficulty, so repeat
 
 ---
 
+## 📸 Screenshots
+
+### Home Screen
+
+<p align="center">
+  <img src="screenshots/HomePage.png" alt="Pearly Home Screen" width="700">
+</p>
+
+### Gameplay
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Easy — Stopwatch</strong><br><br>
+      <img src="screenshots/EasyStopwatch.png" alt="Easy Stopwatch Gameplay" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Medium — Countdown</strong><br><br>
+      <img src="screenshots/MediumCountdown.png" alt="Medium Countdown Gameplay" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Hard — Relaxed</strong><br><br>
+      <img src="screenshots/HardRelaxed.png" alt="Hard Relaxed Gameplay" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Expert — Countdown</strong><br><br>
+      <img src="screenshots/ExpertCountdown.png" alt="Expert Countdown Gameplay" width="100%">
+    </td>
+  </tr>
+</table>
+
+### Game Results
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Game Won</strong><br><br>
+      <img src="screenshots/EasyCountdownGameWonPopUp.png" alt="Pearly Game Won Popup" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Game Lost</strong><br><br>
+      <img src="screenshots/MediumGameLostPopUp.png" alt="Pearly Game Lost Popup" width="100%">
+    </td>
+  </tr>
+</table>
+
+### Menus
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>Best Scores</strong><br><br>
+      <img src="screenshots/BestScoreMenu.png" alt="Pearly Best Scores Menu" width="100%">
+    </td>
+    <td align="center" width="50%">
+      <strong>Game Menu</strong><br><br>
+      <img src="screenshots/GameMenu.png" alt="Pearly Game Menu" width="100%">
+    </td>
+  </tr>
+</table>
+
+### End Screen
+
+<p align="center">
+  <img src="screenshots/EndPage.png" alt="Pearly End Screen" width="700">
+</p>
+
+---
 ## 🚀 Run Pearly
 
 ### Play Online
@@ -89,11 +159,17 @@ Pearly/
 │   └── sound effects
 │
 └── screenshots/
-    ├── home.png
-    ├── gameplay.png
-    └── result.png
+     ├── HomePage.png
+     ├── EasyStopwatch.png
+     ├── MediumCountdown.png
+     ├── HardRelaxed.png
+     ├── ExpertCountdown.png
+     ├── EasyCountdownGameWonPopUp.png
+     ├── MediumGameLostPopUp.png
+     ├── BestScoreMenu.png
+     ├── GameMenu.png
+     └── EndPage.png
 ```
-
 ---
 
 ## 💡 What I Practiced
